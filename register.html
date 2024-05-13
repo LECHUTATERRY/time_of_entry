@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        /* Basic styling for body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9; /* Light grey background */
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            align-items: center; /* Aligns vertically */
+            justify-content: center; /* Aligns horizontally */
+        }
+
+        /* Styling the form area */
+        form {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
+            padding: 20px;
+            background: white; /* white background for the form */
+            border-radius: 8px; /* rounded corners */
+            max-width: 300px;
+            width: 100%;
+        }
+
+        /* Styling for labels and inputs */
+        label, input, button {
+            display: block;
+            width: calc(100% - 20px); /* full width minus padding */
+            margin: 10px 0;
+        }
+
+        input, button {
+            padding: 10px; /* padding for input and buttons */
+            border: 1px solid #ccc; /* border color */
+            border-radius: 5px; /* rounded borders for inputs and buttons */
+        }
+
+        /* Styling for the submit button */
+        button {
+            background-color: #5c67f2; /* Blue background for the button */
+            color: white; /* White text color */
+            font-weight: bold;
+            border: none; /* No border for the button */
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4a54e1; /* Slightly darker blue on hover */
+        }
+
+        /* Header and paragraph styling */
+        h1, p {
+            text-align: center; /* Center align the text */
+            color: #333; /* Dark grey color for the text */
+        }
+
+        a {
+            color: #5c67f2; /* Link color */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline on hover for links */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Register</h1>
+        <form action="register.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" aria-label="Username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" aria-label="Password" required>
+
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" aria-label="Confirm Password" required>
+            
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="login.html">Log in here</a>.</p>
+        </form>
+    </div>
+</body>
+</html>

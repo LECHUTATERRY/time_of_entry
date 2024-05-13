@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            background-color: #f4f4f9; /* Optional: background color */
+        }
+        form {
+            border: 1px solid #f1f1f1;
+            padding: 20px;
+            background-color: #f3f3f3;
+            width: 300px; /* Fixed width */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for better visibility */
+        }
+        input[type=text], input[type=password] {
+            width: calc(100% - 30px); /* Width minus padding */
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: 1px solid #ccc; /* Add border to maintain consistency */
+            background: #f1f1f1;
+        }
+        input[type=text]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        button:hover {
+            opacity:1;
+        }
+        .container {
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+   
+    <img src="path/to/images/<?php echo htmlspecialchars($imageName); ?>" alt="User Image">
+    <form action="login.php" method="post">
+        <div class="container">
+            <h2>Login Form</h2>
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <button type="submit">Login</button>
+            <p>New user? <a href="register.php">Register here</a></p>
+        </div>
+    </form>
+</body>
+</html>
